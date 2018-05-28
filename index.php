@@ -19,5 +19,5 @@ require __DIR__ . '/vendor/autoload.php';
 // $a = new Acme\App\Case;
 $a = new Acme\Foo;
 $a->o();
-var_dump($a);
+
 ?>

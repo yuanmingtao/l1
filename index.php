@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * JOE PHP
+ * ============================================================================
+ * Learn Composer L1
+ * ============================================================================
+ * $Author: joe $
+ * $Id: index.php 1 2018-05-28 13:51:08Z joe $
+*/
  // $loader = require __DIR__ . '/vendor/autoload.php';
 require __DIR__ . '/vendor/autoload.php';
 

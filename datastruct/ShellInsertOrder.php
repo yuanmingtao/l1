@@ -25,15 +25,17 @@ class ShellInsertOrder implements sort
         $i = 0;
         $j = 0;
         $k = 0;
-        $dt = [300, 8, 1];
+        $dt = [403, 27, 1];
         for ($k = 0; $k < count($dt); $k++)
-            for ($i = 2 * $dt[$k]; $i < count($input)/$dt[$k] * $dt[$k];)
+            for ($i = $dt[$k] + 1; $i < count($input); $i++)
             {
-                $input[0] =  $input[$i];
-                for ($j = $i - $dt[$k]; $input[0] < $input[$j]; $j = $j - $dt[$k])
-                    $input[$j + $dt[$k]] = $input[$j];
-                 $input[$j + $dt[$k]] = $input[0];
-                 $i = $i + $dt[$k];
+                if ($input[$i] < $input[$i - $dt[$k]])
+                {
+                    $input[0] =  $input[$i];
+                    for ($j = $i - $dt[$k]; $j > 0 && $input[0] < $input[$j]; $j = $j - $dt[$k])
+                        $input[$j + $dt[$k]] = $input[$j];
+                    $input[$j + $dt[$k]] = $input[0];
+                }
             }
         $end = microtime();
         

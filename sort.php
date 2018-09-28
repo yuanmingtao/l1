@@ -4,14 +4,14 @@
 	$input = array();
 	$input[0] = 0;
 	$MR = array();
-	while($i++ < 10000000)
+	while($i++ < 1000000)
 	{
 		$input[$i] = rand(10,99);
 		// echo $input[$i]." ";
 	}
 	
 	$start = microtime();
-	HeapSort($input);
+	ShellInsert($input);
 	$end = microtime();
 	print_time($start, $end);
 	

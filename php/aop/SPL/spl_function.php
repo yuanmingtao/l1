@@ -19,7 +19,7 @@ spl_autoload_extensions(".php");
 
 
 //最先执行 
-// spl_autoload("iii"); //默认扩展名 .php .inc
+spl_autoload("iii"); //默认扩展名 .php .inc
 //spl_autoload没找到  执行spl_autoload_register
 spl_autoload_register(function($class_name){
     echo 'I am a register autoload';
@@ -32,9 +32,10 @@ function __autoload($class_name)
 // spl_autoload("iii", ".inc"); //默认扩展名 .php .inc
 // spl_autoload("iii", ".php"); //默认扩展名 .php .inc
 
-$t = new ttt();
+spl_autoload_call('ttt');
+// $t = new ttt();
 
-$t->ok();
+// $t->ok();
 
 //类未定义时调用
 // function __autoload($class_name)

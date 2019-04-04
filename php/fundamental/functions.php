@@ -19,7 +19,7 @@ function foo ($name)
             return  "A";
         }
         
-        function test()
+        function smallTalk()
         {
             echo "test".PHP_EOL;
         }

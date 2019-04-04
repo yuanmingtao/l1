@@ -1,6 +1,6 @@
 <?php
  namespace Acme\App;
- class Case
+ class C1
  {
  	public static function TestCase1 ()
  	{

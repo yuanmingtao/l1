@@ -1,7 +1,9 @@
 {
 	"name" : "yuanmingtao/l1",
 	"require" : {
-		"monolog/monolog" : "1.0.*"
+		"monolog/monolog" : "1.0.*",
+		"guzzlehttp/guzzle": "^6.3",
+		"league/csv": "^9.2"
 	},
 	"autoload" : {
 		"psr-4" : {

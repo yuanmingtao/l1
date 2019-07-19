@@ -1,11 +1,11 @@
 {
-	"name":"yuanmingtao/l1",
-
-    "require": {
-        "monolog/monolog": "1.0.*"
-    },
-
-    "autoload": {
-        "psr-4": {"Acme\\": "Acme/"}
-    }
+	"name" : "yuanmingtao/l1",
+	"require" : {
+		"monolog/monolog" : "1.0.*"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"Acme\\" : "Acme/"
+		}
+	}
 }

@@ -24,5 +24,6 @@ class Foo
     {
         //Qualified class name inside another namespace
         $exception = new \Exception();
+        echo "I am in Foo class";
     }
 }

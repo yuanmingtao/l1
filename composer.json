@@ -1,13 +1,39 @@
 {
 	"name" : "yuanmingtao/l1",
+	"description" : "Scan URLs from a CSV file and report inaccesstiable URLs",
+	"keywords" : [
+		"URL",
+		"SCANNER",
+		"csv"
+	],
+	"license" : "MIT",
+	"homepage" : "http://example.com",
 	"require" : {
+		"php" : ">=5.4.0",
 		"monolog/monolog" : "1.0.*",
-		"guzzlehttp/guzzle": "^6.3",
-		"league/csv": "^9.2"
+		"guzzlehttp/guzzle" : "^6.3",
+		"league/csv" : "^9.2",
+		"yuanmingtao/scanner" : "^1.0"
+	},
+	"require-dev" : {
+		"phpunit/phpunit" : "~4.3"
+	},
+	"suggest" : {
+		"league/csv" : "~6.0"
 	},
 	"autoload" : {
 		"psr-4" : {
 			"Acme\\" : "Acme/"
 		}
+	},
+	"authors" : [{
+			"name" : "Joe Chan",
+			"email" : "cshujun21625@gmail.com",
+			"homepage" : "https://github.com/yuanmingtao",
+			"role" : "Master"
+		}
+	],
+	"support" : {
+		"email" : "cshujun21625@163.com"
 	}
 }

@@ -28,8 +28,18 @@ try {
     $userId = filter_input(INPUT_GET, 'id');
     $statement->bindValue(':id', $userId, PDO::PARAM_INT);
     $statement->execute();
-    while (($result = $statement->fetch(PDO::FETCH_ASSOC)) !== false) {
-        echo $result['email']; 
+    
+//     $result  = $statement->fetchColumn(0);
+//     var_dump($result);
+//     exit;
+
+//     $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+//     foreach($results as $result)
+//         echo $result['email'] . PHP_EOL;
+//     exit;
+
+    while (($result = $statement->fetch(PDO::FETCH_OBJ)) !== false) {
+        var_dump($result->email);
     }
 } catch (PDOException $e) {
     //Database connection failed

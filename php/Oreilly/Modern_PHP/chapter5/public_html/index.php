@@ -20,7 +20,7 @@ try {
      );
     
 //     $sql = "select id FROM users WHERE email =:email";
-    $sql = "select * FROM users WHERE id =:id";
+    $sql = "select email FROM user WHERE id =:id";
     //PDOStatement
     $statement = $pdo->prepare($sql);
 //     $email = filter_input(INPUT_GET, 'email');
@@ -29,14 +29,14 @@ try {
     $statement->bindValue(':id', $userId, PDO::PARAM_INT);
     $statement->execute();
     
-//     $result  = $statement->fetchColumn(0);
-//     var_dump($result);
-//     exit;
+    while($result  = $statement->fetchColumn(0))
+        var_dump($result);
+    exit;
 
-//     $results = $statement->fetchAll(PDO::FETCH_ASSOC);
-//     foreach($results as $result)
-//         echo $result['email'] . PHP_EOL;
-//     exit;
+    $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+    foreach($results as $result)
+        echo $result['email'] . PHP_EOL;
+    exit;
 
     while (($result = $statement->fetch(PDO::FETCH_OBJ)) !== false) {
         var_dump($result->email);

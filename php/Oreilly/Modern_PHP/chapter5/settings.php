@@ -11,8 +11,9 @@
 return [
     'host' => '127.0.0.1',
     'port' => '3306',
-    'dname' => 'books',
+    'dname' => 'learn',
     'username' => 'root',
     'password' => 'Li42uf03',
     'charset' => 'utf8'
 ];
+
